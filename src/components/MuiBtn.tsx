@@ -1,7 +1,26 @@
-import { Stack, Button, IconButton } from "@mui/material";
+import {
+  Stack,
+  Button,
+  IconButton,
+  ButtonGroup,
+  ToggleButtonGroup,
+  ToggleButton,
+} from "@mui/material";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 import SendIcon from "@mui/icons-material/Send";
 import { Send } from "@mui/icons-material";
+import { useState } from "react";
+
 const MuiBtn = () => {
+  const [formats, setFormats] = useState<string[]>([]);
+  const handleFormatChanges = (
+    e: React.MouseEvent<HTMLElement>,
+    updatedFormats: string[]
+  ) => {
+    setFormats(updatedFormats);
+  };
   return (
     <Stack spacing={4}>
       <Stack spacing={2} direction="row">
@@ -51,6 +70,37 @@ const MuiBtn = () => {
         <IconButton aria-label="send" color="success" size="small">
           <SendIcon />
         </IconButton>
+      </Stack>
+      {/* Button group to group buttons */}
+      <br />
+      <hr />
+      <Stack direction="row">
+        <ButtonGroup
+          variant="contained"
+          orientation="vertical"
+          size="small"
+          color="secondary"
+          aria-label="alignment button group" //Helps with accesibility
+        >
+          <Button onClick={() => alert("Stop annoying me")}>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </Stack>
+      <hr />
+      <br />
+      <Stack direction="row">
+        <ToggleButtonGroup value={formats} onChange={handleFormatChanges}>
+          <ToggleButton value="bold">
+            <FormatBoldIcon />
+          </ToggleButton>
+          <ToggleButton value="italic">
+            <FormatItalicIcon />
+          </ToggleButton>
+          <ToggleButton value="underlined">
+            <FormatUnderlinedIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
     </Stack>
   );
