@@ -90,7 +90,11 @@ const MuiBtn = () => {
       <hr />
       <br />
       <Stack direction="row">
-        <ToggleButtonGroup value={formats} onChange={handleFormatChanges}>
+        <ToggleButtonGroup
+          value={formats}
+          onChange={handleFormatChanges}
+          color="success"
+        >
           <ToggleButton value="bold">
             <FormatBoldIcon />
           </ToggleButton>
