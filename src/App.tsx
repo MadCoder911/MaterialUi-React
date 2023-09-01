@@ -12,6 +12,11 @@ import MuiRating from "./components/MuiRating";
 import { Autocomplete } from "@mui/material";
 import MuiAutoComplete from "./components/MuiAutoComplete";
 import MuiLayout from "./components/MuiLayout";
+import MuiGrid from "./components/MuiGrid";
+import MuiCard from "./components/MuiCard";
+import MuiAccordion from "./components/MuiAccordion";
+import MuiImageList from "./components/MuiImageList";
+import MuiNavBar from "./components/MuiNavBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,7 +42,12 @@ function App() {
       {/* <MuiSwitch /> */}
       {/* <MuiRating /> */}
       {/* <MuiAutoComplete /> */}
-      <MuiLayout />
+      {/* <MuiLayout /> */}
+      {/* <MuiGrid /> */}
+      {/* <MuiCard /> */}
+      {/* <MuiAccordion /> */}
+      {/* <MuiImageList /> */}
+      <MuiNavBar />
     </div>
   );
 }
