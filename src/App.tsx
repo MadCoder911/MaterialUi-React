@@ -17,6 +17,13 @@ import MuiCard from "./components/MuiCard";
 import MuiAccordion from "./components/MuiAccordion";
 import MuiImageList from "./components/MuiImageList";
 import MuiNavBar from "./components/MuiNavBar";
+import MuiLink from "./components/MuiLink";
+import MuiBreadCrumbs from "./components/MuiBreadCrumbs";
+import MuiDrawer from "./components/MuiDrawer";
+import MuiSpeedDial from "./components/MuiSpeedDial";
+import MuiBottomnavigation from "./components/MuiBottomnavigation";
+import { MuiAvatar } from "./components/MuiAvatar";
+import MuiBadge from "./components/MuiBadge";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,7 +54,15 @@ function App() {
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
       {/* <MuiImageList /> */}
-      <MuiNavBar />
+      {/* Navbar and Menu */}
+      {/* <MuiNavBar /> */}
+      {/* <MuiLink /> */}
+      {/* <MuiBreadCrumbs /> */}
+      {/* <MuiDrawer /> */}
+      {/* <MuiSpeedDial /> */}
+      {/* <MuiBottomnavigation /> */}
+      {/* <MuiAvatar /> */}
+      <MuiBadge />
     </div>
   );
 }
